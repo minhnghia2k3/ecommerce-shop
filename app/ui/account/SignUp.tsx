@@ -1,4 +1,4 @@
-import { signup } from '@/app/lib/actions/user.actions'
+import { signup } from '@/lib/actions/user.actions'
 import Link from 'next/link'
 import React from 'react'
 

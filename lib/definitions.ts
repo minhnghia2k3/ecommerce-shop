@@ -6,7 +6,7 @@ export type TUser = {
     email: string;
     password: string;
     fullName: string;
-    role: 'Admin' | 'User' | 'Staff',
+    role: 'Admin' | 'Customer' | 'Staff',
 }
 
 export type TProduct = {

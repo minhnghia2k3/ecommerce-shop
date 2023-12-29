@@ -19,9 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <html lang="en">
-                <body className={`${jost.className}`}>{children}</body>
-            </html>
+            <body className={`${jost.className}`}>{children}</body>
         </html>
     )
 }
