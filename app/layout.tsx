@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <html lang="en">
-                <body className={`${jost.className} antialiased`}>{children}</body>
+                <body className={`${jost.className}`}>{children}</body>
             </html>
         </html>
     )

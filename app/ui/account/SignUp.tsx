@@ -1,3 +1,4 @@
+import { signup } from '@/app/lib/actions/user.actions'
 import Link from 'next/link'
 import React from 'react'
 
@@ -64,12 +65,12 @@ const SignUp = () => {
                                     </div>
                                     <p className="mb-0">Or Sign-Up With Email</p>
                                     <hr className="my-1" />
-                                    <form id="form1" className="form-group flex-wrap ">
+                                    <form id="form1" className="form-group flex-wrap" action={signup} >
                                         <div className="form-input col-lg-12 my-4">
                                             <input
                                                 type="text"
                                                 id="exampleInputName"
-                                                name="email"
+                                                name="fullName"
                                                 placeholder="Your full name"
                                                 className="form-control mb-3 p-4"
                                             />
@@ -83,6 +84,7 @@ const SignUp = () => {
                                             <input
                                                 type="password"
                                                 id="inputPassword1"
+                                                name="password"
                                                 placeholder="Set your password"
                                                 className="form-control mb-3 p-4"
                                                 aria-describedby="passwordHelpBlock"
@@ -90,15 +92,12 @@ const SignUp = () => {
                                             <input
                                                 type="password"
                                                 id="inputPassword2"
+                                                name="confirmPassword"
                                                 placeholder="Retype your password"
                                                 className="form-control mb-3 p-4"
                                                 aria-describedby="passwordHelpBlock"
                                             />
                                             <label className="py-3 d-flex flex-wrap justify-content-between">
-                                                <div>
-                                                    <input type="checkbox" required={true} className="d-inline" />
-                                                    <span className="label-body ">Remember Me</span>
-                                                </div>
                                                 <div id="passwordHelpBlock" className="form-text ">
                                                     <a href="#" className="text-primary  fw-bold">
                                                         {" "}
@@ -107,9 +106,9 @@ const SignUp = () => {
                                                 </div>
                                             </label>
                                             <div className="d-grid my-3">
-                                                <a href="#" className="btn btn-dark btn-lg rounded-1">
+                                                <button type='submit' className="btn btn-dark btn-lg rounded-1">
                                                     Sign Up
-                                                </a>
+                                                </button>
                                             </div>
                                         </div>
                                     </form>
