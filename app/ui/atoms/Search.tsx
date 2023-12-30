@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoIosSearch } from 'react-icons/io'
-
+import '@/'
 const Search = () => {
     return (
         <div className="search-bar">

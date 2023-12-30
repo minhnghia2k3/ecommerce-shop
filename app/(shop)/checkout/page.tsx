@@ -9,39 +9,14 @@ const page = () => {
                         <div className="col-lg-6">
                             <h2 className="text-dark pb-3">Billing Details</h2>
                             <div className="billing-details">
-                                <label htmlFor="fname">First Name*</label>
+                                <label htmlFor="fname">Receiver Name*</label>
                                 <input
                                     type="text"
                                     id="fname"
-                                    name="firstname"
+                                    name="receiver_name"
                                     className="form-control mt-2 mb-4 ps-3"
                                 />
-                                <label htmlFor="lname">Last Name*</label>
-                                <input
-                                    type="text"
-                                    id="lname"
-                                    name="lastname"
-                                    className="form-control mt-2 mb-4 ps-3"
-                                />
-                                <label htmlFor="cname">Company Name(optional)*</label>
-                                <input
-                                    type="text"
-                                    id="cname"
-                                    name="companyname"
-                                    className="form-control mt-2 mb-4"
-                                />
-                                <label htmlFor="cname">Country / Region*</label>
-                                <select
-                                    className="form-select form-control mt-2 mb-4"
-                                    aria-label="Default select example"
-                                >
-                                    <option hidden={false}>
-                                        United States
-                                    </option>
-                                    <option value={1}>UK</option>
-                                    <option value={2}>Australia</option>
-                                    <option value={3}>Canada</option>
-                                </select>
+
                                 <label htmlFor="address">Street Address*</label>
                                 <input
                                     type="text"
@@ -49,41 +24,6 @@ const page = () => {
                                     name="address"
                                     placeholder="House number and street name"
                                     className="form-control mt-3 ps-3 mb-3"
-                                />
-                                <input
-                                    type="text"
-                                    id="adr"
-                                    name="address"
-                                    placeholder="Appartments, suite, etc."
-                                    className="form-control ps-3 mb-4"
-                                />
-                                <label htmlFor="city">Town / City *</label>
-                                <input
-                                    type="text"
-                                    id="city"
-                                    name="city"
-                                    className="form-control mt-3 ps-3 mb-4"
-                                />
-                                <label htmlFor="state">State *</label>
-                                <select
-                                    className="form-select form-control mt-2 mb-4"
-                                    aria-label="Default select example"
-                                >
-                                    <option hidden={false}>
-                                        Florida
-                                    </option>
-                                    <option value={1}>New York</option>
-                                    <option value={2}>Chicago</option>
-                                    <option value={3}>Texas</option>
-                                    <option value={3}>San Jose</option>
-                                    <option value={3}>Houston</option>
-                                </select>
-                                <label htmlFor="zip">Zip Code *</label>
-                                <input
-                                    type="text"
-                                    id="zip"
-                                    name="zip"
-                                    className="form-control mt-2 mb-4 ps-3"
                                 />
                                 <label htmlFor="email">Phone *</label>
                                 <input
