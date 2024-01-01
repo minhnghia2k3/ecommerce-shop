@@ -2,6 +2,8 @@ import { ObjectId } from "mongodb";
 
 export type TCategory = 'T-shirt' | 'Hoodies' | 'Shirt' | 'Pants' | 'Shoes' | 'Accessories';
 
+type TOrderStatus = 'Pending' | 'Shipping' | 'Completed' | 'Cancelled';
+
 export type TUser = {
     email: string;
     password: string;
@@ -27,13 +29,22 @@ export type TProduct = {
     createdBy: ObjectId;
 }
 
-
-type TProductVariant = {
-    color: string;
-    size: string;
-    stock?: number;
-    sold?: number;
-    price?: number;
+export type TOrder = {
+    userId: ObjectId;
+    information: {
+        name: string;
+        address: string;
+        phone: string;
+        email: string;
+        notes?: string;
+    }
+    products: Array<{
+        productId: ObjectId;
+        quantity: number;
+        size: string;
+    }>;
+    status: TOrderStatus;
+    orderDate: Date;
 }
 
 export type TRevenue = {
@@ -44,18 +55,5 @@ export type TRevenue = {
 
 export type TTransaction = {
     user: ObjectId;
-    products: Array<{
-        product: ObjectId;
-        quantity: number;
-
-    }>
-    receiverName: string;
-    address: string;
-    phone: string;
-    email: string;
-    description?: string;
-    method: 'COD' | 'Bank Transfer';
-    shippingFee: number;
-    totalPrice: number;
-    status: 'Pending' | 'Shipping' | 'Completed' | 'Cancelled';
+    orderId: ObjectId;
 }
